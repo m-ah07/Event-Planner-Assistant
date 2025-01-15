@@ -1,23 +1,35 @@
 # Event Planner Assistant
 
-Event Planner Assistant is a simple, lightweight web application to help you plan and manage your events more efficiently. This project includes a static front-end with Bootstrap for styling and a bit of JavaScript for interactivity. 
-
-
-## Features
-
-- **Event Scheduling**: Quickly schedule events, specify dates, and add descriptions.
-- **Add / Delete Events**: Dynamically add new events and remove existing ones.
-- **Interactive UI**: Built with Bootstrap to provide a modern, responsive design.
-- **Lightweight**: Runs on the client side without a database or backend server.
+A multi-page, responsive web application designed to simplify event management. Easily schedule events, track budgets, manage invitations, and more!
 
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Project Structure](#project-structure)
-4. [Contributing](#contributing)
-5. [License](#license)
+1. [Features](#features)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Project Structure](#project-structure)
+6. [Changelog](#changelog)
+7. [Contributing](#contributing)
+8. [License](#license)
+
+
+## Features
+
+- **Multi-Page Layout**: Includes Home, About, and Login pages.
+- **Event Management**: Add, view, and delete events dynamically.
+- **Search & Sort**: Search for events by title; automatically sorted by date.
+- **Local Storage**: Save events data so it persists between sessions.
+- **Responsive UI**: Built with Bootstrap for a modern, mobile-friendly design.
+
+
+## Technologies
+
+- **HTML5, CSS3, JavaScript**
+- **Bootstrap 5** for responsive design
+- **Font Awesome** for icons
+- **Local Storage** for client-side data persistence
 
 
 ## Installation
@@ -33,32 +45,49 @@ No additional server is needed since this is a static application.
 
 ## Usage
 
-1. **View Current Events:** Scroll to the "Current Events" section to see a list of events.
-2. **Add a New Event:** Navigate to the "Add Event" section and fill out the form with event details.
-3. **Delete an Event:** Click the trash icon next to any event to remove it.
+1. **Home Page** (`index.html`):
+- Learn about the features.
+- View or add events.
+2. **About Page** (`about.html`):
+- Understand the purpose and future roadmap of the project.
+3. **Login Page** (`login.html`):
+- A demo login page (no actual authentication yet).
 
 ## Project Structure
 
 ```plaintext
 Event-Planner-Assistant/
-├── index.html               # Main HTML page
-├── styles.css               # Custom CSS styles
-├── script.js                # Custom JavaScript for dynamic behavior
-├── assets/                  # Images (e.g., hero-image, screenshots, etc.)
-│    └── hero-image.jpg
-├── LICENSE                  # License file
-└── README.md                # Project documentation
+├── index.html
+├── login.html
+├── about.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── app.js
+├── assets/
+│   ├── hero-image.jpg
+│   └── (other images)
+├── README.md
+└── LICENSE
 ```
 
 
+## Changelog
+
+**v2.0 (Major Update)**
+- Added multiple pages (About, Login).
+- Implemented localStorage to save event data.
+- Introduced event searching and date-based sorting.
+- Improved UI/UX with Bootstrap 5, including a new navbar and footer.
+- Updated README with detailed instructions and new screenshots.
+
 ## Contributing
-Contributions are welcome!
 
-1. **Fork** the repository.
-2. **Create a new branch** for your feature or bug fix.
-3. **Commit** your changes and push them to your fork.
-4. **Submit a Pull Request** for review.
-
+1. Fork the project.
+2. **Create a feature branch** (`git checkout -b feature/YourFeature`).
+3. **Commit your changes** (`git commit -m 'Add some feature'`).
+4. **Push to your branch** (`git push origin feature/YourFeature`).
+5. **Open a Pull Request** on GitHub.
 
 ## License
 This project is licensed under the [MIT LICENSE](LICENSE). 

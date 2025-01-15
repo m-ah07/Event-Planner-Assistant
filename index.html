@@ -10,39 +10,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css" />
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
     <!-- ======= Navbar ======= -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="fas fa-calendar-check"></i> Event Planner Assistant
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-calendar-check"></i> Event Planner
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                 aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#add-event">Add Event</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#add-event">Add Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -50,12 +40,11 @@
     <!-- ======= End Navbar ======= -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero"
-        class="bg-dark text-light text-center hero-section d-flex justify-content-center align-items-center">
-        <div>
+    <section class="hero-section d-flex justify-content-center align-items-center text-light text-center">
+        <div class="container position-relative z-2">
             <h1 class="display-4 fw-bold">Plan Your Events Effortlessly</h1>
             <p class="lead my-4">
-                The ultimate tool to manage your events, track budgets, and invite guests with ease.
+                Manage your events, track budgets, and invite guests with ease.
             </p>
             <a href="#add-event" class="btn btn-primary btn-lg">Get Started</a>
         </div>
@@ -63,7 +52,7 @@
     <!-- ======= End Hero Section ======= -->
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="py-5 bg-light">
+    <section class="py-5 bg-light" id="features">
         <div class="container">
             <h2 class="text-center mb-5">Features</h2>
             <div class="row g-4">
@@ -105,18 +94,27 @@
     </section>
     <!-- ======= End Features Section ======= -->
 
-    <!-- ======= Events Section (Dynamic List) ======= -->
-    <section id="events" class="py-5">
+    <!-- ======= Events Section ======= -->
+    <section class="py-5" id="events">
         <div class="container">
-            <h2 class="text-center mb-5">Current Events</h2>
-            <ul id="event-list" class="list-group list-group-flush fs-5">
-            </ul>
+            <h2 class="text-center mb-4">Current Events</h2>
+
+            <!-- Search Bar -->
+            <div class="d-flex mb-4">
+                <input type="text" class="form-control me-2" id="search-input" placeholder="Search events..." />
+                <button class="btn btn-outline-primary" id="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+
+            <!-- Event List -->
+            <ul id="event-list" class="list-group list-group-flush fs-5"></ul>
         </div>
     </section>
     <!-- ======= End Events Section ======= -->
 
     <!-- ======= Add Event Section ======= -->
-    <section id="add-event" class="py-5 bg-light">
+    <section class="py-5 bg-light" id="add-event">
         <div class="container">
             <h2 class="text-center mb-4">Add New Event</h2>
             <div class="row justify-content-center">
@@ -136,9 +134,7 @@
                             <textarea class="form-control" id="eventDescription" rows="3"
                                 placeholder="Enter event description" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">
-                            Add Event
-                        </button>
+                        <button type="submit" class="btn btn-primary w-100">Add Event</button>
                     </form>
                 </div>
             </div>
@@ -146,30 +142,8 @@
     </section>
     <!-- ======= End Add Event Section ======= -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
-            <p class="text-center mb-5">
-                Have questions or feedback? Let us know!
-            </p>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <p><i class="fas fa-envelope me-2"></i>info@example.com</p>
-                    <p><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="#" class="text-dark mx-2 fs-4"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-dark mx-2 fs-4"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-dark mx-2 fs-4"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ======= End Contact Section ======= -->
-
     <!-- ======= Footer ======= -->
-    <footer class="bg-dark text-light py-3 text-center">
+    <footer class="bg-dark text-light py-3 text-center mt-5">
         <div class="container">
             <p class="mb-0">&copy; 2025 Event Planner Assistant. All rights reserved.</p>
         </div>
@@ -178,9 +152,8 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
