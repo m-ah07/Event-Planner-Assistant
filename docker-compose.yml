@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo
+    container_name: event_planner_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: event_planner_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_URI=mongodb://mongo:27017/event_planner
+      - JWT_SECRET=mysecretkey
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./frontend
+    container_name: event_planner_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
