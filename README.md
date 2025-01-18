@@ -125,12 +125,12 @@ A comprehensive full-stack application designed to help individuals and organiza
 Event-Planner-Assistant/
 ├── backend/
 │   ├── src/
-│   │   ├── app.js                   # Express server setup & main configuration
+│   │   ├── app.js                  # Express server setup & main configuration
 │   │   ├── routes/
 │   │   │   ├── users.js            # Routes for user signup/login
 │   │   │   └── events.js           # Routes for event CRUD operations
 │   │   ├── controllers/
-│   │   │   └── eventController.js   # Business logic for event routes
+│   │   │   └── eventController.js  # Business logic for event routes
 │   │   ├── models/
 │   │   │   ├── User.js             # Mongoose schema/model for User
 │   │   │   └── Event.js            # Mongoose schema/model for Event
