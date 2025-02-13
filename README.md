@@ -55,7 +55,7 @@ A comprehensive full-stack application designed to help individuals and organiza
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/marwan-ahmed-23/Event-Planner-Assistant.git
+   git clone https://github.com/m-ah07/Event-Planner-Assistant.git
    ```
 
 2. **Install Backend Dependencies**
